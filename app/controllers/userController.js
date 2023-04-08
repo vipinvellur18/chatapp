@@ -6,7 +6,6 @@ const Post = db.post;
 const Op = db.Sequelize.Op;
 const {getPagination,getPagingData} = require('../helpers/pagination');
 
-
 exports.createProfile = async function(req, res) {
 
     try{
