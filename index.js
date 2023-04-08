@@ -2,18 +2,14 @@ const express = require('express')
 const path = require('path')
 const app = express();
 const mysql = require('mysql2')
-const cors = require("cors");
 const cookieParser = require('cookie-parser');
 const bodyParser = require('body-parser');
 const db = require("./app/models");
 // const moment = require('moment')
 require('dotenv/config')
-var corsOptions = {
-    origin: ["https://beta-node.solminds.com","https://app.gisaschools.org","https://new.solminds.in","https://gisaschools.org","http://localhost:3000","http://gisanodejs.us-east-1.elasticbeanstalk.com"]
-};
+
 global.__basedir = __dirname;
 
-app.use(cors(corsOptions));
 app.use(express.json());
 app.use(express.urlencoded({extended:false}));
 app.use(express.static(path.join(__dirname, 'public')))
